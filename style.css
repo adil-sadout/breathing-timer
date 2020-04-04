@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    color: white;
+    padding: 50px;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: url(bg.jpg);
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    position: relative;
+}
+
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 280px;
+    height: 280px;
+}
+.container2{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+}
+
+.container2 div{
+    position: absolute;
+}
+#text{
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+}
+
+
+.container-circle{
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: #133f39;
+    border-radius: 50%;
+}
+
+.container-gradiant{
+    height: 300px;
+    width: 300px;
+    background: conic-gradient(
+    #55b7a4 0%,
+    #4ca493 40%,
+    #fff 40%,
+    #fff 60%,
+    #336d62 60%,
+    #2a5b52 100%
+  );
+    border-radius: 50%;
+    z-index: -2;
+    left: -10px;
+    top: -10px;
+}
+
+
+
+.point-container{
+    height: calc(50% + 50px);
+    width: 30px;
+    left: calc(50% - 15px);
+    top: -50px;
+    animation: rotate 7.5s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.point{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+    
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.container2.grow{
+    animation: grow 3s linear forwards;
+}
+@keyframes grow{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+
+
+
+.container2.shrink{
+    animation: shrink 3s linear forwards;
+}
+@keyframes shrink{
+    from{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 450px){
+
+    .container{
+        width: 180px;
+        height: 180px;
+    }
+    .container-gradiant{
+        width: 200px;
+        height: 200px;
+    }
+
+}
