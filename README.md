@@ -1,2 +1,2 @@
 # breathing-timer
-url: https://awesome-heisenberg-42daeb.netlify.app/
+url: https://relaxed-breathing-timer.netlify.app/
